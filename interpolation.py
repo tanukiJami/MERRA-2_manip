@@ -10,8 +10,8 @@ import os
 import xarray as xr
 import numpy as np
 
-input_path = "/opt/AQ/UseCase/Cheverly/Data/Input/Satellite/Merra-2"
-output_directory = "/opt/AQ/UseCase/Cheverly/Data/Output/Merra-2"
+input_path = "/path/to/input"
+output_directory = "/path/to/output"
 
 file_list = [filename for filename in os.listdir(input_path) if filename.endswith('.nc') or filename.endswith('.nc4')]
 
