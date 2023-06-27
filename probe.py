@@ -13,14 +13,14 @@ import numpy as np
 
 
 #Input path (non-interpolated files)
-input_path =  '/opt/AQ/UseCase/Cheverly/Data/Input/Satellite/Merra-2' 
+input_path =  '/path/to/input' 
 
 
 # In[182]:
 
 
 #Input path (inteprolated files)
-input_path = '/opt/AQ/UseCase/Cheverly/Data/Output/Merra-2'
+input_path = '/path/to/output'
 
 
 # In[183]:
