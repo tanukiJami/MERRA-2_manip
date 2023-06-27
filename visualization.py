@@ -18,6 +18,22 @@ import matplotlib.colors as colors
 
 #FOR VARIABLES WITH 3 DIMENSIONS
 
+# Let the user choose which inteprolated data to display
+valid_methods = [
+    'linear', 'nearest', 'cubic', 'quadratic', 'slinear',
+    'polynomial'
+]
+
+while True:
+    method = input("Choose which interpolation method you want to display the results for: ")
+    if method in valid_methods:
+        break
+    else:
+        print("Invalid interpolation method. Please check your spelling.")
+
+data_dir = f'/path/to/{method}'
+
+
 def base_map(bounds: dict = {}, padding: float = 0.5) -> plt.axes:
     '''
     Creates map with bounds and padding
@@ -75,10 +91,6 @@ def map_data(data: xr.DataArray, title: str, lat: xr.DataArray, lon: xr.DataArra
     plt.title(title)
     plt.show()
 
-# Specify the directory where the netCDF files are located
-#data_dir = '/opt/AQ/UseCase/Cheverly/Data/Input/Satellite/Merra-2'
-data_dir = '/opt/AQ/UseCase/Cheverly/Data/Output/Merra-2'
-
 # Get a list of netCDF files in the directory
 file_list = [os.path.join(data_dir, file) for file in os.listdir(data_dir) if file.endswith('.nc')]
 
@@ -124,6 +136,21 @@ dataset.close()
 
 
 #FOR VARIABLES WITH 4 DIMENSIONS
+
+# Let the user choose which inteprolated data to display
+valid_methods = [
+    'linear', 'nearest', 'cubic', 'quadratic', 'slinear',
+    'polynomial'
+]
+
+while True:
+    method = input("Choose which interpolation method you want to display the results for: ")
+    if method in valid_methods:
+        break
+    else:
+        print("Invalid interpolation method. Please check your spelling.")
+
+directory = f'/path/to/{method}'
 
 def base_map(bounds: dict = {}, padding: float = 0.5) -> plt.axes:
     '''
@@ -182,9 +209,6 @@ def map_data(data: xr.DataArray, title: str, lat: xr.DataArray, lon: xr.DataArra
 
     plt.title(title)
     plt.show()
-
-# Specify the directory path for netCDF files
-directory = '/directory/to/interpolated/files'
 
 # Get a list of netCDF files in the directory
 file_list = [os.path.join(directory, file) for file in os.listdir(directory) if file.endswith('.nc')]
