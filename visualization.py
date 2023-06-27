@@ -184,7 +184,7 @@ def map_data(data: xr.DataArray, title: str, lat: xr.DataArray, lon: xr.DataArra
     plt.show()
 
 # Specify the directory path for netCDF files
-directory = '/opt/AQ/UseCase/Cheverly/Data/Output/Merra-2'
+directory = '/directory/to/interpolated/files'
 
 # Get a list of netCDF files in the directory
 file_list = [os.path.join(directory, file) for file in os.listdir(directory) if file.endswith('.nc')]
